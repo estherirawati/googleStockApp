@@ -1,0 +1,31 @@
+ <!-- form handling -->
+ <form action="/api/stocks" method="POST" id="add_stock">
+    <div class="new_stock">
+        <div class="form-group">
+            <label for="nama" class="text">Nama</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="nama" value="" placeholder="Pixel Phones" required>
+        </div>
+        <div class="form-group">
+            <label for="desc" class="text">Deskripsi</label>
+            <input type="text" name="desc" value="" placeholder="Pixel Phones are made by Google" required>
+        </div>
+
+        <div class="form-group">
+            <label for="status" class="text">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Tersedia" required>
+                <label for="radio-4" class="radio-label">Tersedia</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Tidak Tersedia" >
+                <label for="radio-5" class="radio-label">Tidak Tersedia</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Simpan</button>
+        </div>
+
+    </div>
+</form>

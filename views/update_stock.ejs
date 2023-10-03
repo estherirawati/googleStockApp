@@ -1,0 +1,53 @@
+<!-- include header -->
+<%- include('include/_header') %>
+	<!-- /include header -->
+
+	<!-- Main Site -->
+	<main id="site-main">
+		<div class="container">
+			<div class="flex-between">
+				<a href="/"><i class="bi bi-chevron-double-left"></i> kembali</a>
+			</div>
+			<h2>Update Stock</h2>
+
+			<!-- add stock form -->
+			<!-- form handling -->
+			<form method="POST" id="update_stock">
+				<div class="new_stock">
+					<div class="form-group">
+						<label for="nama" class="">Nama</label>
+						<input type="hidden" name="docId" value="<%= stock.docId %>">
+						<input type="text" name="nama" value="<%= stock.nama %>" placeholder="Pixel Phone" required>
+					</div>
+					<div class="form-group">
+						<label for="desc" class="">Deskripsi</label>
+						<input type="text" name="desc" value="<%= stock.desc%>" placeholder="Phone Made by Google" required>
+					</div>
+					<div class="form-group">
+						<label for="status" class="">Status</label>
+						<div class="radio inline">
+							<input type="radio" id="radio-4" name="status" value="Tersedia" required <%=stock.status=='Tersedia'
+								? 'checked' : '' %> >
+							<label for="radio-4" class="radio-label">Tersedia</label>
+						</div>
+						<div class="radio inline">
+							<input type="radio" id="radio-5" name="status" value="Tidak Tersedia" <%=stock.status=='Tidak Tersedia' ? 'checked'
+								: '' %> >
+							<label for="radio-5" class="radio-label">Tidak Tersedia</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn text-dark update">Simpan</button>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+	</main>
+	<!-- /Main Site -->
+
+	<!-- include footer -->
+	<%- include('include/_footer') %>
+		<!-- /include footer -->
